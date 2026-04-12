@@ -16,10 +16,17 @@ body{font-family:Inter,system-ui,Segoe UI,Helvetica,Arial,sans-serif;margin:0;ba
 .cert{font-weight:600;color:var(--accent);margin:6px 0}
 .card{background:var(--card);padding:18px;border-radius:8px;box-shadow:0 6px 18px rgba(11,118,185,0.04);margin:18px 0}
 .skills-list{list-style:none;padding:0;margin:0}
-.skills-list li{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(10,10,10,0.04)}
-.skill-name{font-weight:700;color:#222}
+.skills-list li{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(10,10,10,0.04)}
+.skill-name{font-weight:700;color:#222;width:180px}
 .skill-name::before{content: '●'; color:var(--accent); display:inline-block; width:14px; margin-right:8px; transform:translateY(-1px)}
-.skill-value{color:var(--muted);max-width:72%;text-align:right}
+.skill-value{color:var(--muted);max-width:calc(100% - 180px);text-align:left}
+/* Contact list styles */
+.contact-list{margin:6px 0 10px 0}
+.contact-list p{margin:6px 0;color:var(--muted);line-height:1.3}
+.contact-list strong{color:var(--heading);display:inline-block;width:200px}
+@media (max-width:520px){
+  .contact-list strong{display:block;width:auto}
+}
 @media (max-width:520px){
   .skills-list li{flex-direction:column;align-items:flex-start}
   .skill-value{text-align:left;margin-top:6px}
